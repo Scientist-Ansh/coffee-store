@@ -24,3 +24,7 @@ a {
     background: black;
   }
 }
+
+:root {
+  --base-font-size: 16;
+}
