@@ -14,9 +14,10 @@ const Base = ({
   as: Component = 'p',
   type = 'paragraph',
   children,
+  className,
   ...props
 }) => (
-  <Component {...props} className={styles[mapToClass[type]]}>
+  <Component {...props} className={`${styles[mapToClass[type]]} ${className}`}>
     {children}
   </Component>
 );
@@ -33,4 +34,6 @@ export const Heading5 = (props) => <Base as="h5" type="heading5" {...props} />;
 
 export const Paragraph = (props) => <Base as="p" type="paragraph" {...props} />;
 
-export const Subtext = (props) => <Base as="p" type="subtext" {...props} />;
+export const Subtext = (props) => (
+  <Base as={props.as} type="subtext" {...props} />
+);

@@ -1,0 +1,23 @@
+.rating {
+  color: var(--color-secondary);
+  background-color: white;
+  padding: 6px 10px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.ratingContainer {
+  padding: 4px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.7) 0%,
+    rgba(255, 255, 255, 0.4) 100%
+  );
+  backdrop-filter: blur(4px);
+
+  border-radius: 27px;
+}
