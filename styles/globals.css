@@ -27,4 +27,10 @@ a {
 
 :root {
   --base-font-size: 16;
+
+  --color-primary: #ff902a;
+  --color-secondary: #2f2105;
+  --color-gray: #7e7d7a;
+  --color-topaz: #ffcb7c;
+  --color-topaz-light: #f9d9aa;
 }

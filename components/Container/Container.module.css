@@ -1,0 +1,6 @@
+.container {
+  padding-left: 8.43rem;
+  padding-left: clamp(1rem, 9.37vw, 17rem);
+  padding-right: 8.43rem;
+  padding-right: clamp(1rem, 9.37vw, 17rem);
+}
