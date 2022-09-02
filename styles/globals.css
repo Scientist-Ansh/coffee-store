@@ -33,4 +33,6 @@ a {
   --color-gray: #7e7d7a;
   --color-topaz: #ffcb7c;
   --color-topaz-light: #f9d9aa;
+
+  --color-solid-button-shadow: rgba(223, 195, 124, 0.25);
 }

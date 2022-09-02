@@ -1,0 +1,35 @@
+.solid {
+  background-color: var(--color-secondary);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: white;
+  font-weight: 600;
+  padding: 12px 32px;
+  border-radius: 33px;
+  border: none;
+  box-shadow: 0px 4px 32px var(--color-solid-button-shadow);
+}
+
+.outlined {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  border-radius: 8px;
+}
+
+.outlined:disabled {
+  color: var(--color-topaz);
+  border: 2px solid var(--color-topaz);
+}
+
+.text {
+  background-color: transparent;
+  padding: 8px 16px;
+  color: var(--color-primary);
+  border: none;
+  outline: none;
+}
+
+.text:hover {
+  border: 2px solid var(--color-primary);
+}
