@@ -20,7 +20,7 @@ export const DishCard = ({
         <span className={styles.rating}>
           <Rating value={rating} />
         </span>
-        <img alt="Coffee" src={image} />
+        <img decode="async" alt="Coffee" src={image} />
       </div>
       <div className={styles.DishCardBody}>
         <div className={styles.bodyLeft}>
@@ -50,7 +50,11 @@ export const DishCard = ({
         </div>
         <div className={styles.bodyRight}>
           <Heading4>12k</Heading4>
-          <Rating value={5} />
+          <img
+            className={styles.cartIcon}
+            src="/icons/shopping-cart.svg"
+            alt="shopping-cart"
+          />
         </div>
       </div>
     </div>
