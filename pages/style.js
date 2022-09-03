@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { Button } from '../components/Button';
 import { DishCard } from '../components/DishCard';
+import { FeatureCard } from '../components/FeatureCard';
 import { Rating } from '../components/Rating/Rating';
 import { Spacer } from '../components/Spacer';
 import {
@@ -47,6 +48,10 @@ export default function Style() {
 
         <Spacer size="40px" />
         <Rating value={4.8} />
+        <Spacer size="40px" />
+
+        <FeatureCard />
+
         <Spacer size="40px" />
 
         <DishCard />
