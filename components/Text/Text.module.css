@@ -38,4 +38,13 @@
   font-size: 0.88rem;
   font-size: clamp(0.88rem, 1.2vw, 1.6rem);
   line-height: 1.5;
+  color: var(--color-gray);
+}
+
+.subtextBold {
+  font-size: 0.88rem;
+  font-size: clamp(0.88rem, 1.2vw, 1.6rem);
+  line-height: 1.5;
+  font-weight: 600;
+  color: var(--color-gray);
 }

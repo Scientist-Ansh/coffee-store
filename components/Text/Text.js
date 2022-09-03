@@ -8,6 +8,7 @@ const mapToClass = {
   heading5: 'heading5',
   paragraph: 'paragraph',
   subtext: 'subtext',
+  subtextBold: 'subtextBold',
 };
 
 const Base = ({
@@ -36,4 +37,8 @@ export const Paragraph = (props) => <Base as="p" type="paragraph" {...props} />;
 
 export const Subtext = (props) => (
   <Base as={props.as} type="subtext" {...props} />
+);
+
+export const SubtextBold = (props) => (
+  <Base as={props.as} type="subtextBold" {...props} />
 );
