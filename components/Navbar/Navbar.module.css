@@ -1,0 +1,35 @@
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: fit-content;
+}
+
+.navItems {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navItems li {
+  padding: 10px 20px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+
+.navItems li:hover {
+  border-bottom: 2px solid var(--color-topaz);
+  color: var(--color-primary);
+}

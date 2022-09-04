@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Button } from '../components/Button';
 import { DishCard } from '../components/DishCard';
 import { FeatureCard } from '../components/FeatureCard';
+import { Navbar } from '../components/Navbar';
 import { Rating } from '../components/Rating/Rating';
 import { Spacer } from '../components/Spacer';
 import {
@@ -27,6 +28,7 @@ export default function Style() {
       </Head>
 
       <main className={styles.main}>
+        <Navbar />
         <Heading1>Heading 1</Heading1>
         <Heading2>Heading 2</Heading2>
         <Heading3>Heading 3</Heading3>
