@@ -12,6 +12,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: white;
   color: var(--color-secondary);
+  overflow-x: hidden;
 }
 
 a {
@@ -29,4 +30,5 @@ a {
   --color-topaz-light: #f9d9aa;
 
   --color-solid-button-shadow: rgba(223, 195, 124, 0.25);
+  --color-hero-bg: #f6ebda;
 }

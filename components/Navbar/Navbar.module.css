@@ -1,3 +1,6 @@
+.container {
+  background-color: var(--color-hero-bg);
+}
 .navbar {
   position: relative;
   display: flex;

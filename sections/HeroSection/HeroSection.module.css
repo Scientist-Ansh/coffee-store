@@ -1,0 +1,32 @@
+.container {
+  background-color: var(--color-hero-bg);
+  min-height: calc(100vh - 86px);
+  position: relative;
+}
+
+.row {
+  padding-top: 100px;
+}
+
+.image {
+  width: 100%;
+  min-width: 150px;
+  height: auto;
+}
+
+.buttons {
+  display: flex;
+  gap: 26px;
+}
+
+.beansLeft {
+  width: 30vw;
+  transform: translateX(-10vw);
+}
+
+.beansRight {
+  position: absolute;
+  width: 30vw;
+  top: -100px;
+  right: -10vw;
+}
