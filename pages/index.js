@@ -2,11 +2,12 @@ import Head from 'next/head';
 import { Container } from '../components/Container/Container';
 import { Navbar } from '../components/Navbar';
 import { HeroSection } from '../sections/HeroSection';
+import { PopularNow } from '../sections/PopularNow';
 import styles from '../styles/Home.module.css';
 import { getData } from '../utils/getData';
 
 export default function Home({ hero, aboutus, popularNow, features }) {
-  console.log(hero);
+  console.log(popularNow);
   const {
     heroSection: {
       title: heroTitle,
@@ -35,6 +36,8 @@ export default function Home({ hero, aboutus, popularNow, features }) {
           image={heroImage}
           buttons={heroButtons}
         />
+
+        <PopularNow popularSnacks={popularNow.allSnacks} />
       </main>
     </div>
   );

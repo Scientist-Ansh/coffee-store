@@ -1,0 +1,8 @@
+.bg {
+  margin: auto;
+  background-color: var(--color-topaz-light);
+  width: 90%;
+  border-radius: 64px;
+  height: 300px;
+  margin-top: -200px;
+}
