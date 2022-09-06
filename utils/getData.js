@@ -7,7 +7,7 @@ query MyQuery {
         text
       }
       image {
-        url
+        url(transformation: {document: {output: {format: webp}}})
       }
     }
     button {
@@ -21,7 +21,7 @@ query MyQuery {
       title
       description
       image {
-        url
+        url(transformation: {document: {output: {format: webp}}})
       }
     }
   }
@@ -32,7 +32,7 @@ query MyQuery {
         text
       }
       image {
-        url
+        url(transformation: {document: {output: {format: webp}}})
       }
     }
     button {
@@ -51,12 +51,28 @@ query MyQuery {
         price
         description
         image {
-          url
+          url(transformation: {document: {output: {format: webp}}})
+        }
+      }
+    }
+  }
+  specialMenus {
+    allSnacks {
+      singleSnack {
+        id
+        price
+        rating
+        served
+        title
+        description
+        image {
+          url(transformation: {document: {output: {format: webp}}})
         }
       }
     }
   }
 }
+
 `;
 
 export function getData() {

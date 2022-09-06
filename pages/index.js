@@ -1,15 +1,23 @@
 import Head from 'next/head';
 import { Container } from '../components/Container/Container';
 import { Navbar } from '../components/Navbar';
+import { Spacer } from '../components/Spacer';
 import { AboutUs } from '../sections/AboutUs/AboutUs';
 import { FeaturesSection } from '../sections/FeaturesSection';
 import { HeroSection } from '../sections/HeroSection';
 import { PopularNow } from '../sections/PopularNow';
+import { Specials } from '../sections/Specials';
 import styles from '../styles/Home.module.css';
 import { getData } from '../utils/getData';
 
-export default function Home({ hero, aboutus, popularNow, features }) {
-  console.log(aboutus);
+export default function Home({
+  hero,
+  aboutus,
+  popularNow,
+  features,
+  specials,
+}) {
+  // console.log(specials);
   const {
     heroSection: {
       title: heroTitle,
@@ -57,6 +65,9 @@ export default function Home({ hero, aboutus, popularNow, features }) {
           image={aboutusImage}
           buttons={aboutusButtons}
         />
+
+        <Specials specialSnacks={specials.allSnacks} />
+        <Spacer size="120px" />
       </main>
     </div>
   );
@@ -72,6 +83,7 @@ export async function getStaticProps() {
       aboutus: data.data.aboutuses[0],
       features: data.data.deliveryServices[0],
       popularNow: data.data.popularNows[0],
+      specials: data.data.specialMenus[0],
     },
   };
 }

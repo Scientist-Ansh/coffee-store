@@ -6,7 +6,6 @@ import { DishCard } from '../../components/DishCard';
 import { Spacer } from '../../components/Spacer';
 
 export const PopularNow = ({ popularSnacks }) => {
-  console.log(popularSnacks);
   return (
     <section className={styles.PopularNow}>
       <Container>
