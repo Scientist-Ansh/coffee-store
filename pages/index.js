@@ -4,9 +4,11 @@ import { Navbar } from '../components/Navbar';
 import { Spacer } from '../components/Spacer';
 import { AboutUs } from '../sections/AboutUs/AboutUs';
 import { FeaturesSection } from '../sections/FeaturesSection';
+import { Footer } from '../sections/Footer';
 import { HeroSection } from '../sections/HeroSection';
 import { PopularNow } from '../sections/PopularNow';
 import { Specials } from '../sections/Specials';
+import { Testimonials } from '../sections/Testimonials';
 import styles from '../styles/Home.module.css';
 import { getData } from '../utils/getData';
 
@@ -16,8 +18,8 @@ export default function Home({
   popularNow,
   features,
   specials,
+  testimonials,
 }) {
-  // console.log(specials);
   const {
     heroSection: {
       title: heroTitle,
@@ -35,6 +37,12 @@ export default function Home({
     },
     button: aboutusButtons,
   } = aboutus;
+
+  const {
+    title: testimonialsTitle,
+    description: { text: testimonialsDescription },
+    testimonials: allTestimonials,
+  } = testimonials;
   return (
     <div>
       <Head>
@@ -68,6 +76,15 @@ export default function Home({
 
         <Specials specialSnacks={specials.allSnacks} />
         <Spacer size="120px" />
+        <Testimonials
+          title={testimonialsTitle}
+          description={testimonialsDescription}
+          testimonials={allTestimonials}
+        />
+        <Spacer size="120px" />
+
+        <Footer />
+        <Spacer size="120px" />
       </main>
     </div>
   );
@@ -84,6 +101,7 @@ export async function getStaticProps() {
       features: data.data.deliveryServices[0],
       popularNow: data.data.popularNows[0],
       specials: data.data.specialMenus[0],
+      testimonials: data.data.testimonials[0],
     },
   };
 }

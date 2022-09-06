@@ -6,7 +6,6 @@ import { Heading3 } from '../../components/Text';
 import { Spacer } from '../../components/Spacer';
 
 export const Specials = ({ specialSnacks }) => {
-  console.log(specialSnacks);
   return (
     <section className={styles.specials}>
       <Container>

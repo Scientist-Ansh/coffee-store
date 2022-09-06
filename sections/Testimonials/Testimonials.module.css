@@ -1,0 +1,35 @@
+.testimonials {
+  padding-left: 8.43rem;
+  padding-left: clamp(1rem, 9.37vw, 17rem);
+  padding-top: 102px;
+  padding-bottom: 102px;
+  position: relative;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 70%;
+  background-image: url(/images/aboutus-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0px 24px 24px 0px;
+}
+
+.swiperSlide {
+  height: auto !important;
+}
+
+.testimonial {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+  background: white;
+  padding: 30px;
+  border: 5px solid;
+}

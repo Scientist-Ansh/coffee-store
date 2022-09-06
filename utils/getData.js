@@ -71,7 +71,18 @@ query MyQuery {
       }
     }
   }
+  testimonials {
+    title
+    description {
+      text
+    }
+    testimonials {
+      title
+      description
+    }
+  }
 }
+
 
 `;
 

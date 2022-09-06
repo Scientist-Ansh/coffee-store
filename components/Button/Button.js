@@ -1,8 +1,19 @@
 import styles from './Button.module.css';
 
-export const Button = ({ text, icon, styleType, onClick, ...props }) => {
+export const Button = ({
+  text,
+  icon,
+  styleType,
+  onClick,
+  className,
+  ...props
+}) => {
   return (
-    <button {...props} className={styles[styleType]} onClick={onClick}>
+    <button
+      {...props}
+      className={`${styles[styleType]} ${className}`}
+      onClick={onClick}
+    >
       {text}
     </button>
   );
