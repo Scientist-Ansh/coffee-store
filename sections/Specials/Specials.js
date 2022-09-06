@@ -10,12 +10,12 @@ export const Specials = ({ specialSnacks }) => {
     <section className={styles.specials}>
       <Container>
         <Heading3>
-          Popular <u>Now</u>
+          Special menu <u>for you</u>
         </Heading3>
         <Spacer size="32px" />
-        <Row className={styles.row}>
+        <Row className={styles.row} justify="center">
           {specialSnacks.slice(0, 6).map(({ singleSnack }) => (
-            <Col key={singleSnack.id} md={4} className={styles.col}>
+            <Col key={singleSnack.id} md={6} lg={4} className={styles.col}>
               <DishCard
                 title={singleSnack.title}
                 description={singleSnack.description}

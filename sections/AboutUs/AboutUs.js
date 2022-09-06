@@ -10,11 +10,16 @@ export const AboutUs = ({ title, description, image, buttons }) => {
   return (
     <section className={styles.aboutus}>
       <Container>
-        <Row>
-          <Col md={4} offset={{ md: 1 }}>
+        <Row justify="center">
+          <Col sm={8} md={5} lg={4} offset={{ lg: 1, md: 1 }}>
             <img src={image} alt="a coffee cup" className={styles.img} />
           </Col>
-          <Col md={5} offset={{ md: 1 }} className={styles.rightCol}>
+          <Col
+            md={5}
+            lg={5}
+            offset={{ lg: 1, md: 1 }}
+            className={styles.rightCol}
+          >
             <Heading3>About us</Heading3>
             <Spacer size="24px" />
             <Heading4>{title}</Heading4>

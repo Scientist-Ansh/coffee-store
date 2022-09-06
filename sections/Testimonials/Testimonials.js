@@ -20,13 +20,13 @@ export const Testimonials = ({ title, description, testimonials }) => {
     <section className={styles.testimonials}>
       <div className={styles.bg}></div>
 
-      <Row align="center">
-        <Col md={4}>
+      <Row>
+        <Col xs={11} md={8} lg={4} className={styles.colLeft}>
           <Heading3>{title}</Heading3>
           <Spacer size="16px" />
           <Paragraph>{description}</Paragraph>
         </Col>
-        <Col offset={{ md: 1 }} md={7}>
+        <Col offset={{ lg: 1 }} lg={7}>
           <Swiper
             ref={swiper}
             className={styles.swiper}

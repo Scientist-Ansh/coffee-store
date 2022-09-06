@@ -4,5 +4,9 @@
   width: 90%;
   border-radius: 64px;
   height: 300px;
-  margin-top: -200px;
+  margin-top: -240px;
+}
+
+.col {
+  margin-bottom: 40px;
 }

@@ -13,9 +13,9 @@ export const FeaturesSection = ({ features }) => {
           How to use delivery <u>service</u>
         </Heading3>
         <Spacer size="32px" />
-        <Row>
+        <Row justify="center">
           {features.map((feature) => (
-            <Col key={feature.title} md={4}>
+            <Col key={feature.title} md={6} lg={4}>
               <FeatureCard
                 title={feature.title}
                 description={feature.description}

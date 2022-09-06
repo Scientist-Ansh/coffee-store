@@ -32,4 +32,11 @@
   background: white;
   padding: 30px;
   border: 5px solid;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 992px) {
+  .colLeft {
+    margin-bottom: 50px;
+  }
 }

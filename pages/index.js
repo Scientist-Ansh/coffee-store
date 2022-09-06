@@ -62,9 +62,9 @@ export default function Home({
           description={heroDescription}
           image={heroImage}
           buttons={heroButtons}
+          popularSnacks={popularNow.allSnacks}
         />
-
-        <PopularNow popularSnacks={popularNow.allSnacks} />
+        <Spacer size="80px" />
 
         <FeaturesSection features={features.features} />
         <AboutUs
