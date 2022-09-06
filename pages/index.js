@@ -1,13 +1,15 @@
 import Head from 'next/head';
 import { Container } from '../components/Container/Container';
 import { Navbar } from '../components/Navbar';
+import { AboutUs } from '../sections/AboutUs/AboutUs';
+import { FeaturesSection } from '../sections/FeaturesSection';
 import { HeroSection } from '../sections/HeroSection';
 import { PopularNow } from '../sections/PopularNow';
 import styles from '../styles/Home.module.css';
 import { getData } from '../utils/getData';
 
 export default function Home({ hero, aboutus, popularNow, features }) {
-  console.log(popularNow);
+  console.log(aboutus);
   const {
     heroSection: {
       title: heroTitle,
@@ -16,6 +18,15 @@ export default function Home({ hero, aboutus, popularNow, features }) {
     },
     button: heroButtons,
   } = hero;
+
+  const {
+    aboutUsSection: {
+      title: aboutusTitle,
+      description: { text: aboutusDescription },
+      image: { url: aboutusImage },
+    },
+    button: aboutusButtons,
+  } = aboutus;
   return (
     <div>
       <Head>
@@ -38,6 +49,14 @@ export default function Home({ hero, aboutus, popularNow, features }) {
         />
 
         <PopularNow popularSnacks={popularNow.allSnacks} />
+
+        <FeaturesSection features={features.features} />
+        <AboutUs
+          title={aboutusTitle}
+          description={aboutusDescription}
+          image={aboutusImage}
+          buttons={aboutusButtons}
+        />
       </main>
     </div>
   );

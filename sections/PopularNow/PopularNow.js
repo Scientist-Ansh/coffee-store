@@ -1,5 +1,5 @@
 import { Container } from '../../components/Container/Container';
-import { Heading2 } from '../../components/Text';
+import { Heading3 } from '../../components/Text';
 import { Row, Col } from 'react-grid-system';
 import styles from './PopularNow.module.css';
 import { DishCard } from '../../components/DishCard';
@@ -10,9 +10,9 @@ export const PopularNow = ({ popularSnacks }) => {
   return (
     <section className={styles.PopularNow}>
       <Container>
-        <Heading2>
+        <Heading3>
           Popular <u>Now</u>
-        </Heading2>
+        </Heading3>
 
         <Spacer size="32px" />
         <div className={styles.rowContainer}>

@@ -1,0 +1,19 @@
+.aboutus {
+  margin: calc(120px + 80px) 0 120px;
+  background-image: url('/images/aboutus-bg.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.rightCol {
+  padding: 84px 0;
+}
+
+.img {
+  filter: drop-shadow(0px 6px 16px rgba(0, 0, 0, 0.16));
+  width: 100%;
+  border: 5px solid white;
+  border-radius: 16px;
+  margin-top: -80px;
+}
