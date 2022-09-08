@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import SwiperCore, { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Col, Row } from 'react-grid-system';
+import { Col, Row, useScreenClass } from 'react-grid-system';
 import { Spacer } from '../../components/Spacer';
 import { Heading3, Paragraph } from '../../components/Text';
 import styles from './Testimonials.module.css';
@@ -13,7 +13,20 @@ import { FeatureCard } from '../../components/FeatureCard/FeatureCard';
 SwiperCore.use([Navigation]);
 
 export const Testimonials = ({ title, description, testimonials }) => {
+  const screenClass = useScreenClass();
   const swiper = useRef(null);
+
+  console.log('screenClass', screenClass);
+  let screenPerView = 3;
+
+  switch (screenClass) {
+    case 'xs':
+      screenPerView = 1;
+    case 'sm':
+      screenPerView = 2;
+    default:
+      screenPerView = 3;
+  }
 
   console.log(testimonials, title, description);
   return (
@@ -31,7 +44,7 @@ export const Testimonials = ({ title, description, testimonials }) => {
             ref={swiper}
             className={styles.swiper}
             spaceBetween={20}
-            slidesPerView={3}
+            slidesPerView={['xs', 'xm'].includes(screenClass) ? 1 : 3}
             centeredSlides={true}
             freeMode={true}
             loop={true}

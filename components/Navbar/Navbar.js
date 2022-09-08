@@ -9,7 +9,7 @@ export const Navbar = () => {
       <nav className={styles.navbar}>
         <Link href="/style">
           <a className={styles.logo}>
-            <img src="/images/logo.svg" />
+            <img src="/images/logo.svg" alt="Cafe Street Logo" />
           </a>
         </Link>
 

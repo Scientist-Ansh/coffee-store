@@ -26,8 +26,16 @@ export const HeroSection = ({
   );
   return (
     <div style={{ position: 'relative' }}>
-      <img src="/images/beans.png" alt="beans" className={styles.beansRight} />
-      <img src="/images/beans.png" alt="beans" className={styles.beansLeft} />
+      <img
+        src="/images/beans.png"
+        alt="coffee beans "
+        className={styles.beansRight}
+      />
+      <img
+        src="/images/beans.png"
+        alt="coffee beans"
+        className={styles.beansLeft}
+      />
       <section className={styles.hero}>
         <Container className={styles.container}>
           <Row className={styles.row}>
