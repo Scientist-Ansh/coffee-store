@@ -84,7 +84,6 @@ export default function Home({
         <Spacer size="120px" />
 
         <Footer />
-        <Spacer size="120px" />
       </main>
     </div>
   );

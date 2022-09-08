@@ -42,3 +42,33 @@
   font-weight: normal;
   font-size: 0.875rem;
 }
+
+.footer {
+  padding-bottom: 20px;
+}
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.socialIcons > div {
+  cursor: pointer;
+}
+
+.heart {
+  font-size: 1.75rem;
+}
+
+.footerContainer a {
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 600;
+}
