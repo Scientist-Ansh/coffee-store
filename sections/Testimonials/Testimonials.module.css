@@ -1,3 +1,6 @@
+.swiper {
+  cursor: grabbing;
+}
 .testimonials {
   padding-left: 8.43rem;
   padding-left: clamp(1rem, 9.37vw, 17rem);

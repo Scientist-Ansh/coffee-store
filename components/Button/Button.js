@@ -11,7 +11,7 @@ export const Button = ({
   return (
     <button
       {...props}
-      className={`${styles[styleType]} ${className}`}
+      className={`${styles[styleType]} ${className} ${styles.button}`}
       onClick={onClick}
     >
       {text}
