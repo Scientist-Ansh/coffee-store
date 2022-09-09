@@ -1,10 +1,13 @@
+/* eslint-disable @next/next/no-img-element */
 import { Rating } from '../Rating/Rating';
 import styles from './DishCard.module.css';
 import Image from 'next/image';
 import { Heading4, Subtext } from '../Text';
 import { Button } from '../Button';
 import { Spacer } from '../Spacer';
-import { SubtextBold } from '../Text/Text';
+import { Paragraph, SubtextBold } from '../Text/Text';
+
+import { useCartContext } from '../../utils/CartContext';
 
 export const DishCard = ({
   title = 'Sandwich',
@@ -14,6 +17,9 @@ export const DishCard = ({
   served = ['hot'],
   type = 2,
 }) => {
+  const { cartItems: items, addToCart, removeFromCart } = useCartContext();
+
+  console.log(items);
   return (
     <div className={styles.DishCard}>
       <div className={styles.DishCardHeader}>
@@ -50,11 +56,41 @@ export const DishCard = ({
         </div>
         <div className={styles.bodyRight}>
           <Heading4>12k</Heading4>
-          <img
-            className={styles.cartIcon}
-            src="/icons/shopping-cart.svg"
-            alt="shopping-cart"
-          />
+
+          {items[title] ? (
+            <div className={styles.cart}>
+              <span
+                onClick={() =>
+                  removeFromCart({
+                    title,
+                    description,
+                    rating,
+                    description,
+                    image,
+                  })
+                }
+              >
+                -
+              </span>{' '}
+              {items[title].value}{' '}
+              <span
+                onClick={() =>
+                  addToCart({ title, description, rating, description, image })
+                }
+              >
+                +
+              </span>
+            </div>
+          ) : (
+            <img
+              onClick={() =>
+                addToCart({ title, description, rating, description, image })
+              }
+              className={styles.cartIcon}
+              src="/icons/shopping-cart.svg"
+              alt="shopping-cart"
+            />
+          )}
         </div>
       </div>
     </div>

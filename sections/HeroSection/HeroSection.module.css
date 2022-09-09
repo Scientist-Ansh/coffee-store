@@ -1,5 +1,5 @@
 .row {
-  padding-top: 100px;
+  padding-top: 30vh;
 }
 
 .image {
@@ -17,14 +17,15 @@
   width: 30vw;
   position: absolute;
   left: 0;
-  top: 400px;
+  top: 500px;
 }
 
 .beansRight {
   position: absolute;
   width: 30vw;
-  top: -100px;
+  top: 0px;
   right: -10vw;
+  z-index: 6;
 }
 
 @media screen and (max-width: 768px) {

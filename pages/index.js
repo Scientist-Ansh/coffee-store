@@ -9,6 +9,8 @@ import { HeroSection } from '../sections/HeroSection';
 import { PopularNow } from '../sections/PopularNow';
 import { Specials } from '../sections/Specials';
 import { Testimonials } from '../sections/Testimonials';
+import { Cart } from '../components/Cart';
+
 import styles from '../styles/Home.module.css';
 import { getData } from '../utils/getData';
 
@@ -55,6 +57,7 @@ export default function Home({
       </Head>
 
       <Navbar />
+      <Cart />
 
       <main>
         <HeroSection
@@ -67,12 +70,14 @@ export default function Home({
         <Spacer size="80px" />
 
         <FeaturesSection features={features.features} />
+        <Spacer id="aboutusScroll" size="200px" />
         <AboutUs
           title={aboutusTitle}
           description={aboutusDescription}
           image={aboutusImage}
           buttons={aboutusButtons}
         />
+        <Spacer id="specialsScroll" size="120px" />
 
         <Specials specialSnacks={specials.allSnacks} />
         <Spacer size="120px" />

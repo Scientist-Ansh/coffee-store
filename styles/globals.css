@@ -13,6 +13,7 @@ body {
   background-color: white;
   color: var(--color-secondary);
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 a {

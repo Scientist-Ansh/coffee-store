@@ -51,4 +51,44 @@
   border-radius: 50%;
   height: 43px;
   width: 43px;
+  cursor: pointer;
+}
+
+.cartIcon:hover {
+  animation: tada 0.6s 1;
+}
+
+.cart {
+  font-size: 1.25;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cart span {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@keyframes tada {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(0.8) rotate(-5deg);
+  }
+  50%,
+  70%,
+  90% {
+    transform: scale(1.15) rotate(5deg);
+  }
+  60%,
+  80% {
+    transform: scale(1.15) rotate(-5deg);
+  }
+  100% {
+    transform: scale(1) rotate(0);
+  }
 }

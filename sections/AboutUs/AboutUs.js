@@ -9,7 +9,7 @@ import ScrollAnimation from '../../components/ScrollAnimation';
 
 export const AboutUs = ({ title, description, image, buttons }) => {
   return (
-    <section className={styles.aboutus}>
+    <section className={styles.aboutus} id="aboutus">
       <Container>
         <Row justify="center">
           <Col

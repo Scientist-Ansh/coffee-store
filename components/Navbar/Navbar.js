@@ -15,13 +15,14 @@ export const Navbar = () => {
 
         <ul className={styles.navItems}>
           <li>
-            <Paragraph>About us</Paragraph>
+            <a href="#aboutusScroll">
+              <Paragraph>About us</Paragraph>
+            </a>
           </li>
           <li>
-            <Paragraph>Specials</Paragraph>
-          </li>
-          <li>
-            <Paragraph>Popular</Paragraph>
+            <a href="#specialsScroll">
+              <Paragraph>Specials</Paragraph>
+            </a>
           </li>
         </ul>
       </nav>

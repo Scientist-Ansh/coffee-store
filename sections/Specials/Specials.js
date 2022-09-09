@@ -22,7 +22,7 @@ export const Specials = ({ specialSnacks }) => {
     }
   };
   return (
-    <section className={styles.specials}>
+    <section className={styles.specials} id="specials">
       <Container>
         <Heading3>
           Special menu <u>for you</u>
