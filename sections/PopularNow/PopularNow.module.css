@@ -10,3 +10,7 @@
 .col {
   margin-bottom: 40px;
 }
+
+.col > div {
+  height: 100%;
+}
