@@ -16,7 +16,6 @@ export const Testimonials = ({ title, description, testimonials }) => {
   const screenClass = useScreenClass();
   const swiper = useRef(null);
 
-  console.log('screenClass', screenClass);
   let screenPerView = 3;
 
   switch (screenClass) {
@@ -28,7 +27,6 @@ export const Testimonials = ({ title, description, testimonials }) => {
       screenPerView = 3;
   }
 
-  console.log(testimonials, title, description);
   return (
     <section className={styles.testimonials}>
       <div className={styles.bg}></div>

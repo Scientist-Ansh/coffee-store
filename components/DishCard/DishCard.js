@@ -20,7 +20,7 @@ export const DishCard = ({
         <span className={styles.rating}>
           <Rating value={rating} />
         </span>
-        <img decode="async" alt={title + ' image'} src={image} />
+        <img decode="async" alt={title + ' image'} src={image} loading="lazy" />
       </div>
       <div className={styles.DishCardBody}>
         <div className={styles.bodyLeft}>

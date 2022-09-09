@@ -5,7 +5,7 @@ export const Rating = ({ value }) => {
   return (
     <div className={styles.ratingContainer}>
       <span className={styles.rating}>
-        <span>{value}</span> <img src="/icons/star.svg" />
+        <span>{value}</span> <img alt="a yellow star" src="/icons/star.svg" />
       </span>
     </div>
   );

@@ -14,27 +14,19 @@ export const HeroSection = ({
   buttons,
   popularSnacks,
 }) => {
-  console.log(
-    'title',
-    title,
-    'description',
-    description,
-    'image',
-    image,
-    'buttons',
-    buttons
-  );
   return (
     <div style={{ position: 'relative' }}>
       <img
         src="/images/beans.png"
         alt="coffee beans "
         className={styles.beansRight}
+        loading="eager"
       />
       <img
         src="/images/beans.png"
         alt="coffee beans"
         className={styles.beansLeft}
+        loading="eager"
       />
       <section className={styles.hero}>
         <Container className={styles.container}>
@@ -61,7 +53,13 @@ export const HeroSection = ({
               className={styles.colRight}
             >
               <div>
-                <img src={image} className={styles.image} decode="sync" />
+                <img
+                  loading="eager"
+                  alt="Cappucino coffee cup"
+                  src={image}
+                  className={styles.image}
+                  decode="sync"
+                />
               </div>
             </Col>
           </Row>

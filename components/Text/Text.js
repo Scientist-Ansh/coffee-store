@@ -27,11 +27,11 @@ export const Heading1 = (props) => <Base as="h1" type="heading1" {...props} />;
 
 export const Heading2 = (props) => <Base as="h2" type="heading2" {...props} />;
 
-export const Heading3 = (props) => <Base as="h3" type="heading3" {...props} />;
+export const Heading3 = (props) => <Base as="h2" type="heading3" {...props} />;
 
-export const Heading4 = (props) => <Base as="h4" type="heading4" {...props} />;
+export const Heading4 = (props) => <Base as="h3" type="heading4" {...props} />;
 
-export const Heading5 = (props) => <Base as="h5" type="heading5" {...props} />;
+export const Heading5 = (props) => <Base as="h4" type="heading5" {...props} />;
 
 export const Paragraph = (props) => <Base as="p" type="paragraph" {...props} />;
 

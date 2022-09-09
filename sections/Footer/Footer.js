@@ -7,6 +7,25 @@ import styles from './Footer.module.css';
 import { Player } from '@lottiefiles/react-lottie-player';
 
 export const Footer = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const {
+      email: { value },
+    } = form.elements;
+
+    fetch('/api/email', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email: value }),
+    }).then((res) => {
+      if (res.status === 200) {
+      }
+    });
+  };
   return (
     <>
       <section className={styles.section}>
@@ -14,11 +33,14 @@ export const Footer = () => {
           <div className={styles.container}>
             <Heading3>Subscribe to get 50% discount price</Heading3>
             <Spacer size="26px" />
-            <div className={styles.inputContainer}>
+            <form onSubmit={handleSubmit} className={styles.inputContainer}>
               <input
-                type="text"
+                type="email"
                 className={styles.input}
                 placeholder="Enter your email"
+                required={true}
+                name="email"
+                id="email"
               />
               <Button
                 styleType="solid"
@@ -28,7 +50,7 @@ export const Footer = () => {
               >
                 Subscribe
               </Button>
-            </div>
+            </form>
           </div>
         </Container>
       </section>
