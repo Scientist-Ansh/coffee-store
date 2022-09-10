@@ -59,6 +59,11 @@
   transform: translateX(120%);
 }
 
+.cartControl {
+  cursor: pointer;
+  font-weight: 600;
+}
+
 @keyframes tada {
   0% {
     transform: scale(1);

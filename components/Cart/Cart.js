@@ -56,8 +56,19 @@ export const Cart = () => {
             <div className={styles.item} key={itemName}>
               <Paragraph>{itemName}</Paragraph>
               <div>
-                <span onClick={() => removeFromCart(item.item)}>-</span>{' '}
-                {item.value} <span onClick={() => addToCart(item.item)}>+</span>
+                <span
+                  className={styles.cartControl}
+                  onClick={() => removeFromCart(item.item)}
+                >
+                  -
+                </span>{' '}
+                {item.value}{' '}
+                <span
+                  className={styles.cartControl}
+                  onClick={() => addToCart(item.item)}
+                >
+                  +
+                </span>
               </div>
             </div>
           );
