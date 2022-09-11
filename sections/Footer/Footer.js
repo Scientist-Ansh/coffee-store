@@ -3,6 +3,7 @@ import { Container } from '../../components/Container/Container';
 import { Spacer } from '../../components/Spacer';
 import { Heading3, Paragraph } from '../../components/Text';
 import styles from './Footer.module.css';
+import emailjs from '@emailjs/browser';
 
 import { Player } from '@lottiefiles/react-lottie-player';
 
@@ -14,17 +15,26 @@ export const Footer = () => {
       email: { value },
     } = form.elements;
 
-    fetch('/api/email', {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ email: value }),
-    }).then((res) => {
-      if (res.status === 200) {
-      }
-    });
+    const templateParams = {
+      voucher: 'CafeStreetSept50',
+      email: value,
+    };
+
+    emailjs
+      .send(
+        'service_r7pewah',
+        'template_c5ay7km',
+        templateParams,
+        'bC1dE4KpYy3HWpIyC'
+      )
+      .then(
+        function (response) {
+          console.log('SUCCESS!', response.status, response.text);
+        },
+        function (error) {
+          console.log('FAILED...', error);
+        }
+      );
   };
   return (
     <>
