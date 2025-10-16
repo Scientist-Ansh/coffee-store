@@ -1,11 +1,14 @@
-import { Button } from '../../components/Button';
-import { Container } from '../../components/Container/Container';
-import { Spacer } from '../../components/Spacer';
-import { Heading3, Paragraph } from '../../components/Text';
-import styles from './Footer.module.css';
-import emailjs from '@emailjs/browser';
+import { Button } from "../../components/Button";
+import Container from "../../components/Container/Container";
+import { Spacer } from "../../components/Spacer";
+import { Heading3, Paragraph } from "../../components/Text";
+import styles from "./Footer.module.css";
+import emailjs from "@emailjs/browser";
+import dynamic from "next/dynamic";
 
-import { Player } from '@lottiefiles/react-lottie-player';
+const Player = dynamic(() => import("@lottiefiles/react-lottie-player"), {
+  ssr: false,
+});
 
 export const Footer = () => {
   const handleSubmit = (e) => {
@@ -16,23 +19,23 @@ export const Footer = () => {
     } = form.elements;
 
     const templateParams = {
-      voucher: 'CafeStreetSept50',
+      voucher: "CafeStreetSept50",
       email: value,
     };
 
     emailjs
       .send(
-        'service_r7pewah',
-        'template_c5ay7km',
+        "service_r7pewah",
+        "template_c5ay7km",
         templateParams,
-        'bC1dE4KpYy3HWpIyC'
+        "bC1dE4KpYy3HWpIyC"
       )
       .then(
         function (response) {
-          console.log('SUCCESS!', response.status, response.text);
+          console.log("SUCCESS!", response.status, response.text);
         },
         function (error) {
-          console.log('FAILED...', error);
+          console.log("FAILED...", error);
         }
       );
   };
@@ -70,7 +73,7 @@ export const Footer = () => {
         <Container className={styles.footerContainer}>
           <div>
             <Paragraph>
-              Made with <span className={styles.heart}>💓</span> by{' '}
+              Made with <span className={styles.heart}>💓</span> by{" "}
               <a href="https://scientist-ansh.github.io/">Ansh</a>
             </Paragraph>
           </div>

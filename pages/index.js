@@ -1,18 +1,15 @@
-import Head from 'next/head';
-import { Container } from '../components/Container/Container';
-import { Navbar } from '../components/Navbar';
-import { Spacer } from '../components/Spacer';
-import { AboutUs } from '../sections/AboutUs/AboutUs';
-import { FeaturesSection } from '../sections/FeaturesSection';
-import { Footer } from '../sections/Footer';
-import { HeroSection } from '../sections/HeroSection';
-import { PopularNow } from '../sections/PopularNow';
-import { Specials } from '../sections/Specials';
-import { Testimonials } from '../sections/Testimonials';
-import { Cart } from '../components/Cart';
+import Head from "next/head";
+import { Navbar } from "../components/Navbar";
+import { Spacer } from "../components/Spacer";
+import { AboutUs } from "../sections/AboutUs/AboutUs";
+import { FeaturesSection } from "../sections/FeaturesSection";
+import { Footer } from "../sections/Footer";
+import { HeroSection } from "../sections/HeroSection";
+import { Specials } from "../sections/Specials";
+import { Testimonials } from "../sections/Testimonials";
+import { Cart } from "../components/Cart";
 
-import styles from '../styles/Home.module.css';
-import { getData } from '../utils/getData';
+import { getData } from "../utils/getData";
 
 export default function Home({
   hero,
@@ -95,17 +92,85 @@ export default function Home({
 }
 
 export async function getStaticProps() {
-  const res = await getData();
-  const data = await res.json();
+  try {
+    const res = await getData();
+    const data = await res.json();
 
-  return {
-    props: {
-      hero: data.data.heroSections[0],
-      aboutus: data.data.aboutuses[0],
-      features: data.data.deliveryServices[0],
-      popularNow: data.data.popularNows[0],
-      specials: data.data.specialMenus[0],
-      testimonials: data.data.testimonials[0],
-    },
-  };
+    // Verify data exists before returning
+    if (!data?.data) {
+      throw new Error("No data received");
+    }
+
+    return {
+      props: {
+        hero: data.data.heroSections[0] || {
+          heroSection: {
+            title: "Welcome to Cafe Street",
+            description: { text: "Your favorite coffee shop" },
+            image: { url: "/default-hero.jpg" },
+          },
+          button: [],
+        },
+        aboutus: data.data.aboutuses[0] || {
+          aboutUsSection: {
+            title: "About Us",
+            description: { text: "Coffee shop with a story" },
+            image: { url: "/default-about.jpg" },
+          },
+          button: [],
+        },
+        features: data.data.deliveryServices[0] || {
+          features: [],
+        },
+        popularNow: data.data.popularNows[0] || {
+          allSnacks: [],
+        },
+        specials: data.data.specialMenus[0] || {
+          allSnacks: [],
+        },
+        testimonials: data.data.testimonials[0] || {
+          title: "What Our Customers Say",
+          description: { text: "Testimonials" },
+          testimonials: [],
+        },
+      },
+    };
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    // Return fallback data if fetch fails
+    return {
+      props: {
+        hero: {
+          heroSection: {
+            title: "Welcome to Cafe Street",
+            description: { text: "Your favorite coffee shop" },
+            image: { url: "/default-hero.jpg" },
+          },
+          button: [],
+        },
+        aboutus: {
+          aboutUsSection: {
+            title: "About Us",
+            description: { text: "Coffee shop with a story" },
+            image: { url: "/default-about.jpg" },
+          },
+          button: [],
+        },
+        features: {
+          features: [],
+        },
+        popularNow: {
+          allSnacks: [],
+        },
+        specials: {
+          allSnacks: [],
+        },
+        testimonials: {
+          title: "What Our Customers Say",
+          description: { text: "Testimonials" },
+          testimonials: [],
+        },
+      },
+    };
+  }
 }
